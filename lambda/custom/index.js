@@ -3,13 +3,21 @@ var http = require('http');
 
 exports.handler = function(event, context, callback){
   var alexa = Alexa.handler(event, context);
-  alexa.registerHandlers(handlers);
+  alexa.registerHandlers(newSessionHandlers, startSearchHandlers);
   alexa.execute();
 };
 
-var handlers = {
-  'LaunchRequest': function () {
-    this.emit('GetAstros');
+const states = {
+	SEARCHMODE: "_SEARCHMODE",
+	DESCRIPTION: "_DESCRIPTION",
+	MULTIPLE_RESULTS: "_MULTIPLE_RESULTS"
+};
+
+const newSessionHandlers = {
+  "LaunchRequest": function() {
+    this.handler.state = states.SEARCHMODE;
+    this.response.speak("welcom to show neo").listen("say user username to link account");
+		this.emit(':responseReady');
   },
   'GetAstros': function() {
 
@@ -30,9 +38,18 @@ var handlers = {
       }
 
       this.emit(':tell', outputSpeech);
+    }
+    );
   }
-);
+}
+
+let startSearchHandlers = Alexa.CreateStateHandler(states.SEARCHMODE, {
+
+  'ConnectUserDeviceIntent': function () {
+    this.response.speak("connect user").listen("say connect user");
+		this.emit(':responseReady');
   },
+
   'AMAZON.HelpIntent': function () {
       this.emit(':ask', "What can I help you with?", "How can I help?");
   },
@@ -42,7 +59,8 @@ var handlers = {
   'AMAZON.StopIntent': function () {
       this.emit(':tell', "Goodbye!");
   }
-};
+}
+);
 
 
 function getAstrosHttp(callback) {

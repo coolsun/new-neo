@@ -1,32 +1,236 @@
 {
-  "interactionModel": {
-    "languageModel": {
-      "invocationName": "api starter",
-      "intents": [
-        {
-          "name": "GetAstros",
-          "samples": [
-            "how many people are in space",
-            "how many people are in space now",
-            "how many people are currently in space",
-            "how many humans are in space",
-            "how many humans are in space now",
-            "how many humans are currently in space",
-            "how many astronauts are in space",
-            "how many astronauts are in space now",
-            "how many astronauts are currently in space"
-          ]
-        },
-        {
-          "name": "AMAZON.StopIntent"
-        },
-        {
-          "name": "AMAZON.CancelIntent"
-        },
-        {
-          "name": "AMAZON.HelpIntent"
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "show neo",
+            "intents": [
+                {
+                    "name": "GetAstros",
+                    "slots": [],
+                    "samples": [
+                        "how many people are in space",
+                        "how many people are in space now",
+                        "how many people are currently in space",
+                        "how many humans are in space",
+                        "how many humans are in space now",
+                        "how many humans are currently in space",
+                        "how many astronauts are in space",
+                        "how many astronauts are in space now",
+                        "how many astronauts are currently in space"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ConnectUserDeviceIntent",
+                    "slots": [
+                        {
+                            "name": "an",
+                            "type": "alpha_numeric"
+                        }
+                    ],
+                    "samples": [
+                        "hello benjamin",
+                        "user {an} {an}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "alpha_numeric",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "9"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "8"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "7"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "6"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "3"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "2"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "1"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "0"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "z"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "y"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "x"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "w"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "v"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "u"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "t"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "s"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "r"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "q"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "p"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "o"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "n"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "m"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "l"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "k"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "j"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "i"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "h"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "g"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "f"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "e"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "d"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "c"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "b"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "a"
+                            }
+                        }
+                    ]
+                }
+            ]
         }
-      ]
     }
-  }
 }

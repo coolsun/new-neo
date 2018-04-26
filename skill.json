@@ -1,5 +1,5 @@
 {
-  "skillManifest": {
+  "manifest": {
     "publishingInformation": {
       "locales": {
         "en-US": {
@@ -14,7 +14,7 @@
             "astronauts",
             "rocket"
           ],
-          "name": "API Starter",
+          "name": "show neo",
           "description": "Guess how many astronauts are currently in space? Know the answer? Alexa does. Just say: Alexa, ask rocket man how many people in space.",
           "smallIconUri": "https://s3.amazonaws.com/cdn.dabblelab.com/img/skill-template-default-sm.png",
           "largeIconUri": "https://s3.amazonaws.com/cdn.dabblelab.com/img/skill-template-default-lg.png"
